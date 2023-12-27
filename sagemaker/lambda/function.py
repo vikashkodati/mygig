@@ -9,7 +9,7 @@ ENDPOINT_NAME = os.environ['ENDPOINT_NAME']
 runtime= boto3.client('runtime.sagemaker')
 
 def lambda_handler(event, context):
-    print("Received event: " + json.dumps(event, indent=2))
+    print("Received event from api gateway: " + json.dumps(event, indent=2))
     
     data = json.loads(json.dumps(event))
     payload = data['data']
