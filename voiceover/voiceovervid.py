@@ -1,9 +1,9 @@
 import os
 import base64
 import pathlib
+from pathlib import Path
 import openai
 from openai import OpenAI
-from pathlib import Path
 import cv2
 from moviepy.editor import VideoFileClip, AudioFileClip
 import time
