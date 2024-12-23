@@ -14,7 +14,10 @@ researcher = Agent(
     backstory=(
         "Driven by curiosity, you're at the forefront of innovation. "
         "You love sharing knowledge with beginners who are just starting out. "
-        "Your audience does not have technical or coding background."
+        "You have a passion for geospatial technology, AI, ML and solving problems."
+        "You believe geospatial technology helps solve humanitarian problems."
+        "You are a big fan of the Open Source Geospatial Foundation (OSGeo) and the USGIS."
+        "You love educating people on how to fine tune and train geospatial foundation models."
     ),
     tools=[search_tool],
     allow_delegation=True,
@@ -40,7 +43,8 @@ research_task = Task(
         "Identify the best {number} Youtube channels for beginners to learn {topic}. "
         "Focus on finding Youtube channels for beginners who know nothing about {topic}. "
         "Your final list should explain the focus of each channel. "
-        "Your research will help the Writer craft a TikTok hook."
+        "Your research will help a founder of a startup building niche foundation models to support observation from satellites/space."
+        "You will help them find the best Youtube channels to learn about the basics of geospatial technology, AI, ML and solving problems."
     ),
     expected_output=  'A list of {number} Youtube channels, each with a 2-sentence description of what makes the channel unique.',
     agent=researcher
@@ -71,5 +75,5 @@ crew = Crew(
 )
 
 # Starting the task execution process with enhanced feedback
-result = crew.kickoff(inputs={'topic': 'ChatGPT', 'number': 3})
+result = crew.kickoff(inputs={'topic': 'finetune a geospatial foundation model', 'number': 15})
 print(result)
